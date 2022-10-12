@@ -269,6 +269,21 @@ else()
   set(INSTALL_OS_HEADERS_DIR "include/os" CACHE PATH "Path where the headers will be installed")
 endif()
 
+# FIXME(deleanor) Replace the use of include_directories.
+#
+# It would be better to add a cmake platform file and maybe customize a cmake
+# distribution or submit the platform file to cmake upstream or use a toolchain
+# file to specify system include paths. See
+# <cmake-install-prefix>/share/cmakemodules/platforms Or maybe just check
+# whether the directory exists?
+include_directories(
+	/usr/include/apple)
+
+# FIXME(deleanor) Replace the use of add_definitions.
+#
+# Should be part of a platform definition file somewhere.
+add_definitions(
+	-DLIBC_NO_LIBCRASHREPORTERCLIENT)
 
 add_subdirectory(dispatch)
 add_subdirectory(man)

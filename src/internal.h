@@ -33,6 +33,9 @@
 #include <config/config.h>
 #endif
 
+// FIXME(deleanor) Evaluate proper location/guarding of include.
+#include <os/base.h>
+
 #define __DISPATCH_BUILDING_DISPATCH__
 #define __DISPATCH_INDIRECT__
 
