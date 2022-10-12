@@ -17,6 +17,8 @@
 #include <dlfcn.h>
 #endif
 #if __has_include(<os/assumes.h>)
+// FIXME(deleanor) Should this include be added?
+#include <os/base.h>
 #include <os/assumes.h>
 #else
 #include <assert.h> 
