@@ -49,7 +49,9 @@
 #if !defined(_WIN32)
 #include <pthread.h>
 #endif
-#if TARGET_OS_MAC
+// FIXME(deleanor)
+// #if TARGET_OS_MAC
+#if 0
 #include <pthread/qos.h>
 #endif
 
