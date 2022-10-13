@@ -41,9 +41,10 @@
 #include "shims/android_stubs.h"
 #endif // __ANDROID__
 
-#if !HAVE_MACH
+// FIXME(deleanor)
+// #if !HAVE_MACH
 #include "shims/mach.h"
-#endif
+// #endif
 #include "shims/target.h"
 
 #if DISPATCH_USE_INTERNAL_WORKQUEUE

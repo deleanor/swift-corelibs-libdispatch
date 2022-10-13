@@ -336,7 +336,7 @@ _dispatch_thread_setspecific_packed_pair(pthread_key_t k1, pthread_key_t k2,
 #endif
 #endif
 
-#if HAVE_MACH
+// #if HAVE_MACH
 #define _dispatch_get_thread_mig_reply_port() ((mach_port_t)(uintptr_t) \
 		_dispatch_thread_getspecific(_PTHREAD_TSD_SLOT_MIG_REPLY))
 #define _dispatch_set_thread_mig_reply_port(p) ( \
@@ -347,7 +347,7 @@ _dispatch_thread_setspecific_packed_pair(pthread_key_t k1, pthread_key_t k2,
 #define _dispatch_set_thread_special_reply_port(p) ( \
 		_dispatch_thread_setspecific(__TSD_MACH_SPECIAL_REPLY, \
 		(void*)(uintptr_t)(p)))
-#endif
+// #endif
 
 DISPATCH_TSD_INLINE DISPATCH_CONST
 static inline unsigned int
