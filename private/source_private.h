@@ -560,7 +560,8 @@ DISPATCH_EXPORT DISPATCH_NOTHROW
 void
 dispatch_source_cancel_and_wait(dispatch_source_t source);
 
-#if __has_include(<mach/mach.h>)
+//#if __has_include(<mach/mach.h>)
+#if 0
 /*!
  * @typedef dispatch_mig_callback_t
  *

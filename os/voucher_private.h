@@ -373,7 +373,8 @@ dispatch_queue_create_with_accounting_override_voucher(
 		dispatch_queue_attr_t _Nullable attr,
 		voucher_t _Nullable voucher);
 
-#if __has_include(<mach/mach.h>)
+//#if __has_include(<mach/mach.h>)
+#if 0
 /*!
  * @group Voucher Mach SPI
  * SPI intended for clients that need to interact with mach messages or mach

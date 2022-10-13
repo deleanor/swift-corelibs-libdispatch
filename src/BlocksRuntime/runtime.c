@@ -16,7 +16,8 @@
 #define __USE_GNU
 #include <dlfcn.h>
 #endif
-#if __has_include(<os/assumes.h>)
+//#if __has_include(<os/assumes.h>)
+#if 0
 #include <os/assumes.h>
 #else
 #include <assert.h> 

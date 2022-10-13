@@ -62,7 +62,8 @@
 #define DISPATCH_LAYOUT_SPI 1
 #endif
 
-#if __has_include(<mach-o/dyld_priv.h>)
+//#if __has_include(<mach-o/dyld_priv.h>)
+#if 0
 #include <mach-o/dyld_priv.h>
 #if !defined(HAVE_DYLD_IS_MEMORY_IMMUTABLE)
 #if defined(DYLD_MACOSX_VERSION_10_12) || defined(DYLD_IOS_VERSION_10_0)
