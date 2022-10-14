@@ -140,7 +140,7 @@ void *_dispatch_wait_for_enqueuer(void **ptr);
 #pragma mark -
 #pragma mark _dispatch_preemption_yield
 
-// #if HAVE_MACH
+#if HAVE_MACH
 #if defined(SWITCH_OPTION_OSLOCK_DEPRESS)
 #define DISPATCH_YIELD_THREAD_SWITCH_OPTION SWITCH_OPTION_OSLOCK_DEPRESS
 #else
@@ -159,7 +159,7 @@ void *_dispatch_wait_for_enqueuer(void **ptr);
 #else
 #define _dispatch_preemption_yield(n) { (void)n; sched_yield(); }
 #define _dispatch_preemption_yield_to(th, n) { (void)n; sched_yield(); }
-// #endif // HAVE_MACH
+#endif // HAVE_MACH
 
 #pragma mark -
 #pragma mark _dispatch_contention_usleep
@@ -175,7 +175,7 @@ void *_dispatch_wait_for_enqueuer(void **ptr);
 #define DISPATCH_CONTENTION_USLEEP_MAX 100000
 #endif
 
-// #if HAVE_MACH
+#if HAVE_MACH
 #if defined(SWITCH_OPTION_DISPATCH_CONTENTION)
 #define _dispatch_contention_usleep(u) thread_switch(MACH_PORT_NULL, \
 		SWITCH_OPTION_DISPATCH_CONTENTION, (u))
@@ -189,6 +189,6 @@ void *_dispatch_wait_for_enqueuer(void **ptr);
 #else
 #define _dispatch_contention_usleep(u) usleep((u))
 #endif
-// #endif // HAVE_MACH
+#endif // HAVE_MACH
 
 #endif // __DISPATCH_SHIMS_YIELD__
