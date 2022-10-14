@@ -231,11 +231,10 @@ upcast(dispatch_object_t dou)
 #if HAVE_LIBKERN_OSCROSSENDIAN_H
 #include <libkern/OSCrossEndian.h>
 #endif
-// FIXME(deleanor) These #if statements are crashing clang, which is obviously an issue.
-// #if HAVE_LIBKERN_OSATOMIC_H
+#if HAVE_LIBKERN_OSATOMIC_H
 #include <libkern/OSAtomic.h>
-// #endif
-// #if HAVE_MACH
+#endif
+#if HAVE_MACH
 #include <mach/boolean.h>
 #include <mach/clock_types.h>
 #include <mach/clock.h>
@@ -256,7 +255,7 @@ upcast(dispatch_object_t dou)
 #if __has_include(<mach/mach_sync_ipc.h>)
 #include <mach/mach_sync_ipc.h>
 #endif
-// #endif /* HAVE_MACH */
+#endif /* HAVE_MACH */
 #if __has_include(<os/reason_private.h>)
 #define HAVE_OS_FAULT_WITH_PAYLOAD 1
 #include <os/reason_private.h>
@@ -475,21 +474,19 @@ extern uint8_t _dispatch_mode;
 DISPATCH_EXPORT DISPATCH_NOINLINE DISPATCH_COLD
 void _dispatch_bug(size_t line, long val);
 
-// FIXME(deleanor)
-// #if HAVE_MACH
+#if HAVE_MACH
 DISPATCH_NOINLINE DISPATCH_COLD
 void _dispatch_bug_mach_client(const char *msg, mach_msg_return_t kr);
-// #endif // HAVE_MACH
+#endif // HAVE_MACH
 
 struct dispatch_unote_class_s;
 
-// FIXME(deleanor)
-// #if HAVE_MACH
+#if HAVE_MACH
 DISPATCH_NOINLINE DISPATCH_COLD
 void _dispatch_bug_kevent_client(const char *msg, const char *filter,
 		const char *operation, int err, uint64_t ident, uint64_t udata,
 		struct dispatch_unote_class_s *du);
-// #endif // HAVE_MACH
+#endif // HAVE_MACH
 
 DISPATCH_NOINLINE DISPATCH_COLD
 void _dispatch_bug_kevent_vanished(struct dispatch_unote_class_s *du);
