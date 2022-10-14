@@ -33,8 +33,10 @@
 #include <config/config.h>
 #endif
 
-// FIXME(deleanor) Evaluate proper location/guarding of include.
+// FIXME(deleanor) Evaluate proper location/guarding of includes/defines.
 #include <os/base.h>
+#define __BSD_VISIBLE 1
+#include <sys/types.h>
 
 #define __DISPATCH_BUILDING_DISPATCH__
 #define __DISPATCH_INDIRECT__
