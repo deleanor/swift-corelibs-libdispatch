@@ -98,34 +98,34 @@
 #cmakedefine01 HAVE_INTTYPES_H
 
 /* Define if Apple leaks program is present */
-#cmakedefine HAVE_LEAKS
+#cmakedefine01 HAVE_LEAKS
 
 /* Define to 1 if you have the <libkern/OSAtomic.h> header file. */
-#cmakedefine HAVE_LIBKERN_OSATOMIC_H
+#cmakedefine01 HAVE_LIBKERN_OSATOMIC_H
 
 /* Define to 1 if you have the <libkern/OSCrossEndian.h> header file. */
-#cmakedefine HAVE_LIBKERN_OSCROSSENDIAN_H
+#cmakedefine01 HAVE_LIBKERN_OSCROSSENDIAN_H
 
 /* Define to 1 if you have the <libproc_internal.h> header file. */
-#cmakedefine HAVE_LIBPROC_INTERNAL_H
+#cmakedefine01 HAVE_LIBPROC_INTERNAL_H
 
 /* Define if mach is present */
-#cmakedefine HAVE_MACH
+#cmakedefine01 HAVE_MACH
 
 /* Define to 1 if you have the `mach_absolute_time' function. */
-#cmakedefine HAVE_MACH_ABSOLUTE_TIME
+#cmakedefine01 HAVE_MACH_ABSOLUTE_TIME
 
 /* Define to 1 if you have the `mach_approximate_time' function. */
-#cmakedefine HAVE_MACH_APPROXIMATE_TIME
+#cmakedefine01 HAVE_MACH_APPROXIMATE_TIME
 
 /* Define to 1 if you have the `mach_port_construct' function. */
-#cmakedefine HAVE_MACH_PORT_CONSTRUCT
+#cmakedefine01 HAVE_MACH_PORT_CONSTRUCT
 
 /* Define to 1 if you have the `malloc_create_zone' function. */
-#cmakedefine HAVE_MALLOC_CREATE_ZONE
+#cmakedefine01 HAVE_MALLOC_CREATE_ZONE
 
 /* Define to 1 if you have the <malloc/malloc.h> header file. */
-#cmakedefine HAVE_MALLOC_MALLOC_H
+#cmakedefine01 HAVE_MALLOC_MALLOC_H
 
 /* Define to 1 if you have the <memory.h> header file. */
 #cmakedefine01 HAVE_MEMORY_H
@@ -134,22 +134,22 @@
 #cmakedefine01 HAVE_NORETURN_BUILTIN_TRAP
 
 /* Define if you have the Objective-C runtime */
-#cmakedefine HAVE_OBJC
+#cmakedefine01 HAVE_OBJC
 
 /* Define to 1 if you have the `posix_fadvise' function. */
-#cmakedefine HAVE_POSIX_FADVISE
+#cmakedefine01 HAVE_POSIX_FADVISE
 
 /* Define to 1 if you have the `posix_spawnp' function. */
-#cmakedefine HAVE_POSIX_SPAWNP
+#cmakedefine01 HAVE_POSIX_SPAWNP
 
 /* Define to 1 if you have the `pthread_key_init_np' function. */
-#cmakedefine HAVE_PTHREAD_KEY_INIT_NP
+#cmakedefine01 HAVE_PTHREAD_KEY_INIT_NP
 
 /* Define to 1 if you have the `pthread_attr_setcpupercent_np' function. */
-#cmakedefine HAVE_PTHREAD_ATTR_SETCPUPERCENT_NP
+#cmakedefine01 HAVE_PTHREAD_ATTR_SETCPUPERCENT_NP
 
 /* Define to 1 if you have the <pthread_machdep.h> header file. */
-#cmakedefine HAVE_PTHREAD_MACHDEP_H
+#cmakedefine01 HAVE_PTHREAD_MACHDEP_H
 
 /* Define to 1 if you have the `pthread_main_np' function. */
 #cmakedefine01 HAVE_PTHREAD_MAIN_NP
@@ -161,16 +161,16 @@
 #cmakedefine01 HAVE_PTHREAD_NP_H
 
 /* Define to 1 if you have the <pthread/qos.h> header file. */
-#cmakedefine HAVE_PTHREAD_QOS_H
+#cmakedefine01 HAVE_PTHREAD_QOS_H
 
 /* Define if pthread work queues are present */
 #cmakedefine01 HAVE_PTHREAD_WORKQUEUES
 
 /* Define to 1 if you have the <pthread_workqueue.h> header file. */
-#cmakedefine HAVE_PTHREAD_WORKQUEUE_H
+#cmakedefine01 HAVE_PTHREAD_WORKQUEUE_H
 
 /* Define to 1 if you have the <pthread/workqueue_private.h> header file. */
-#cmakedefine HAVE_PTHREAD_WORKQUEUE_PRIVATE_H
+#cmakedefine01 HAVE_PTHREAD_WORKQUEUE_PRIVATE_H
 
 /* Define to 1 if you have the <stdint.h> header file. */
 #cmakedefine01 HAVE_STDINT_H
@@ -194,7 +194,7 @@
 #cmakedefine01 HAVE_SYSCONF
 
 /* Define to 1 if you have the <sys/guarded.h> header file. */
-#cmakedefine HAVE_SYS_GUARDED_H
+#cmakedefine01 HAVE_SYS_GUARDED_H
 
 /* Define to 1 if you have the <sys/stat.h> header file. */
 #cmakedefine01 HAVE_SYS_STAT_H
@@ -203,19 +203,19 @@
 #cmakedefine01 HAVE_SYS_TYPES_H
 
 /* Define to 1 if you have the <TargetConditionals.h> header file. */
-#cmakedefine HAVE_TARGETCONDITIONALS_H
+#cmakedefine01 HAVE_TARGETCONDITIONALS_H
 
 /* Define to 1 if you have the `_pthread_workqueue_init' function. */
-#cmakedefine HAVE__PTHREAD_WORKQUEUE_INIT
+#cmakedefine01 HAVE__PTHREAD_WORKQUEUE_INIT
 
 /* Define to use non-portable pthread TSD optimizations for Mac OS X) */
-#cmakedefine USE_APPLE_TSD_OPTIMIZATIONS
+#cmakedefine01 USE_APPLE_TSD_OPTIMIZATIONS
 
 /* Define to tag libdispatch_init as a constructor */
 #cmakedefine01 USE_LIBDISPATCH_INIT_CONSTRUCTOR
 
 /* Define to use Mach semaphores */
-#cmakedefine USE_MACH_SEM
+#cmakedefine01 USE_MACH_SEM
 
 /* Define to use POSIX semaphores */
 #cmakedefine01 USE_POSIX_SEM
@@ -226,7 +226,7 @@
 #endif
 /* Enable GNU extensions on systems that have them.  */
 #ifndef _GNU_SOURCE
-#cmakedefine _GNU_SOURCE
+#cmakedefine01 _GNU_SOURCE
 #endif
 /* Enable threading extensions on Solaris.  */
 #ifndef _POSIX_PTHREAD_SEMANTICS
@@ -246,14 +246,14 @@
 #define VERSION "${PROJECT_VERSION}"
 
 /* Define to 1 if on MINIX. */
-#cmakedefine _MINIX
+#cmakedefine01 _MINIX
 
 /* Define to 2 if the system does not provide POSIX.1 features except with
    this defined. */
-#cmakedefine _POSIX_1_SOURCE
+#cmakedefine01 _POSIX_1_SOURCE
 
 /* Define to 1 if you need to in order for `stat' and other things to work. */
-#cmakedefine _POSIX_SOURCE
+#cmakedefine01 _POSIX_SOURCE
 
 /* Define if using Darwin $NOCANCEL */
-#cmakedefine __DARWIN_NON_CANCELABLE
+#cmakedefine01 __DARWIN_NON_CANCELABLE
